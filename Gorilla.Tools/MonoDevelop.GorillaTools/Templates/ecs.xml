@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<Template originator="Vlad Durnea, Gorilla Project"
+		  created="2012/03/09"
+		  lastModified="2012/03/09">
+  <!-- Template Header -->
+  <TemplateConfiguration>
+    <_Name>ECS File</_Name>
+    <Icon>res:MonoDevelop.GorillaTools.Icons.ecs.ico</Icon>
+    <_Category>Gibbon</_Category>
+    <_Description>Creates an empty ecs file.</_Description>
+  </TemplateConfiguration>
+
+  <!-- Template Content -->
+  <TemplateFiles>
+    <File name="${Name}.ecs" CustomTool="EcsCodeGenerator">
+      <![CDATA[<% //! using="System, System.Collections.Generic" %>]]>
+    </File>
+  </TemplateFiles>
+</Template>

@@ -1,0 +1,37 @@
+﻿<Addin namespace   = "MonoDevelop"
+       id          = "Gorilla-Tools"
+       name        = "Gorilla Tools"
+       author      = "Vlad Durnea, Gorilla Project, Nincode (Durnea Comunicatii srl)"
+       copyright   = "EULA"
+       url         = "http://ecs.gorilla-lang.org"
+       description = "Provides support for ECS files."
+       category    = "IDE extensions"
+       version     = "0.1">
+
+  <Dependencies>
+    <Addin id="Core" version="2.8"/>
+    <Addin id="Ide" version="2.8"/>
+  </Dependencies>
+
+  <Extension path="/MonoDevelop/Core/MimeTypes">
+    <MimeType id="application/x-aspx" _description="Embedded CS File" icon="res:MonoDevelop.GorillaTools.Icons.ecs.ico" isText="true">
+      <File pattern="*.ecs"/>
+    </MimeType>
+  </Extension>
+
+  <Extension path="/MonoDevelop/Ide/FileFilters">
+    <FileFilter id           = "ECSFilter"
+		            insertbefore = "AllFiles"
+		            _label       = "Embedded C# Files"
+		            extensions   = "*.ecs"/>
+  </Extension>
+
+  <Extension path="/MonoDevelop/Ide/FileTemplates">
+    <FileTemplate id="ecs" resource="MonoDevelop.GorillaTools.Templates.ecs.xml"/>
+  </Extension>
+
+  <Extension path="/MonoDevelop/Ide/CustomTools">
+    <Tool name="EcsCodeGenerator" type="MonoDevelop.GorillaTools.Generators.EcsFileGenerator"/>
+  </Extension>
+
+</Addin>
